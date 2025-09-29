@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fresh From Naija - Your go-to online store for authentic Nigerian foodstuff in the United States.">
+    <meta name="keywords" content="Nigerian food, Nigerian ingredients, online grocery, Nigerian groceries, foodstuff, Naija food">
+    <meta name="author" content="Martha Oghwono">
+    <title>FreshfromNaija</title>
+    <link rel="icon" type="image/webp" href="favicon.webp">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="announcement">
+        <marquee behavior="scroll" direction="left" scrollamount="5">Welcome to Fresh From Naija! 
+            Enjoy 10% off on your first order with code WELCOME10. Free shipping on orders over $50!</marquee>
+   </div> 
+    <header id="home">
+        <div class="logo">
+            <h1>Fresh From Naija</h1>
+        </div>
+       <nav>
+            <ul id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="search-container">
+        <input
+        type="text"
+        id="searchBar"
+        placeholder="Search for products..."
+        onkeyup="filterProducts()"
+      />
+        <button type="button">Search</button>
+   </div>
+   <br>
+    <button
+    onclick="document.getElementById('foodimage').src ='foodstuff.jpeg'">Click to get a feel of home
+    </button>
+    <img id="foodimage" src="Freshfromnaija.png" alt="Nigerian Foodstuff" width="250" height="200">
+    <button 
+    onclick="document.getElementById('foodimage').src ='Freshfromnaija.png'">Previous image
+    </button>
+<!--Home Section-->
+    <section id="home">
+        <h2>Bringing Nigerian Foodstuff to Your Doorstep</h2>
+        <p>Shop authentic Nigerian ingredients and enjoy the taste of home.</p>
+        <a href="#shop" class="btn">Shop Now</a>
+    </section>
+<!--About Section-->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Fresh From Naija is dedicated to providing Nigerians in the United States with access to authentic and high-quality foodstuff from Nigeria. We aim to bring the taste of home closer to you.</p>
+    </section>
+
+<!--Product Section-->
+    <section id="shop">
+        <h2 >Shop Nigerian Foodstuff</h2>
+        <div class="products">
+            <div id ="productList" >
+                <img src="Garri.jpeg" alt="Garri">
+                <div class="product">Garri</div>
+                <p>$10.99</p>
+                <button onclick="addToCart('Garri', 10.99); updateCartTotal(10.99);updateCartCount();">Add to Cart</button>
+            </div>
+            <div id="productList">
+                <img src="egusi.webp" alt="Egusi">
+                <div class="product">Egusi</div>
+                <p>$15.99</p>
+                <button onclick="addToCart('Egusi', 15.99); updateCartTotal(15.99);updateCartCount();">Add to Cart</button>
+            </div>
+            <div id="productList">
+                <img src="pepper.webp" alt="Pepper">
+                <div class="product">Dry Pepper</div>
+                <p>$8.99</p>
+                <button onclick="addToCart('Dry Pepper', 8.99); updateCartTotal(8.99);updateCartCount();">Add to Cart</button>
+            </div>
+            <div id="productList">
+                <img src="LAI QUILL RICE.JPG" alt="La Qilla Rice">
+                <div class="product">LAL Qilla Basmati Rice</div>
+                <p>$25.99</p>
+                <button onclick="addToCart('Lal Qilla Basmati Rice', 25.99); updateCartTotal(25.99);updateCartCount();">Add to Cart</button>
+            </div>
+            <div id="productList">
+                <img src="Black Eyed Peas.JPG" alt="Black-eyed peas">
+                <div class="product">Black-eyed peas</h3>
+                <p>$12.99</p>
+                <button onclick="addToCart('Black-eyed peas', 12.99); updateCartTotal(12.99);updateCartCount();">Add to Cart</button>
+            </div>
+            <div id="productList">
+                <img src="Stockfish.JPG" alt="Stock Fish">
+                <div class="product">Stock Fish</div>
+                <p>$30.99</p>
+                <button onclick="addToCart('Stock Fish', 30.99); updateCartTotal(30.99);updateCartCount();">Add to Cart</button>    
+            </div>
+            <div id="productList">
+                <img src="Semovita.JPG" alt="Golden Penny Semovita">
+                <div class="product">Golden Penny Semovita</div>
+                <p>$20.99</p>
+                <button onclick="addToCart('Golden Penny Semovita', 20.99); updateCartTotal(20.99);updateCartCount();">Add to Cart</button>
+            </div>
+            <div id="productList">
+                <img src="Cerelac.WEBP" alt="Cerelac">
+                <div class="product">Palm Oil</div>
+                <p>$18.99</p>
+                <button onclick="addToCart('Cerelac', 18.99); updateCartTotal(18.99);updateCartCount();">Add to Cart</button>
+            </div>
+            <div id="productList">
+                <img src="Wheat meal.JPG" alt="Honeywell wheat meal">
+                <div class="product">Wheat Meal</div>
+                <p>$14.99</p>
+                <button onclick="addToCart('Wheat Meal', 14.99); updateCartTotal(14.99);updateCartCount();">Add to Cart</button>
+            </div>
+            <div id="productList">
+                <img src="Semolina.JPG" alt="Honeywell Semolina">
+                <div class="product">Honeywell wheat meal</div>
+                <p>$22.99</p>
+                <button onclick="addToCart('Honeywell wheat meal', 22.99); updateCartTotal(22.99);updateCartCount();">Add to Cart</button>
+            </div>
+            <div id="productList">
+                <img src="Groudnuts.PNG" alt="Groundnut">
+                <div class="product">Groundnuts</div>
+                <p>$11.99</p>
+                <button onclick="addToCart('Groundnuts', 11.99); updateCartTotal(11.99);updateCartCount();">Add to Cart</button>
+            </div>
+            <div id="productList">
+                <img src="Nido Milk.PNG" alt="Nido Milk">
+                <div class="product">Nido Milk</div>
+                <p>$9.99</p>
+                <button onclick="addToCart('Nido Milk', 9.99); updateCartTotal(9.99);updateCartCount();">Add to Cart</button>    
+            </div>
+            <div id="productList">
+                <img src="Yam Flour.JPG" alt="Yam Flour">
+                <div class="product" >Yam Flour</div>
+                <p>$13.99</p>
+                <button onclick="addToCart('Yam Flour', 13.99); updateCartTotal(13.99);updateCartCount();">Add to Cart</button>
+            </div>
+            <div id="productList">
+                <img src="Custard.JPG" alt="Custard Powder">
+                <div class="product">Custard Powder</div>
+                <p>$7.99</p>
+                <button onclick="addToCart('Custard Powder', 7.99); updateCartTotal(7.99);updateCartCount();">Add to Cart</button>
+            </div>
+            <div id="productList">
+                <img src="Poundo.JPG" alt="Poundo Iyan">
+                <div class="product">Poundo Iyan</div>
+                <p>$19.99</p>
+                <button onclick="addToCart('Poundo Iyan', 19.99); updateCartTotal(19.99); updateCartCount(); displayMessage();">Add to Cart</button>
+        </div>
+     </div>
+    <div id="noResults" style="display:none; color: red; font-weight: bold;">No matching products found 😢</div>
+    </section>
+<!--Cart Section-->
+    <section id="cart">
+        <h2>Your Cart</h2>
+        <div id="cart-count">Items in Cart: <span>0</span></div>
+        <div id="cart-items"></div> 
+        <h3>Total: $<span id="cart-total">0.00</span></h3>
+        <button id="checkoutmessage" onclick="showCartMessage()">View Cart</button>
+        <button id="checkout-btn" onclick="checkout()">Checkout</button>
+        <div id="cartMessage"></div>
+        <div id="messageBox"></div>
+    </section>
+<!--Contact Section-->
+    <footer>
+        <div id="contact">
+            Contact us at <a href="tel:+1(555)-555-5555 ">555-555-5555</a> or <a href="mailto:freshfromnaija@gmail.com">freshfromnaija@gmail.com</a>
+        </div>
+        <p>&copy; 2023 Fresh From Naija. All rights reserved.</p>
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+</html></div>
